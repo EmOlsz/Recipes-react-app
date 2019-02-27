@@ -1,5 +1,5 @@
 # Recipes-react-app
-Simple app for creating recipes based on React, Formik, Flow, Local storage and Sass
+Simple app for creating recipes based on Webpack, React, Formik, Flow, Local storage and Sass
 
 Project uses several libraries :
 
