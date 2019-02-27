@@ -8,7 +8,7 @@ Project uses several libraries :
 3. UniqId for generating id's for each recipe
 4. Flow for maintaining types
 
-HTML and style architecture is based on BEM methodology bind with Sass features
+HTML and style architecture is based on BEM methodology bind with Sass features - fully responsive
 
 Time needed to finish task :
 
