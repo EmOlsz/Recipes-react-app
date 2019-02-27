@@ -16,3 +16,5 @@ Time needed to finish task :
 2. Design, planning and building raw app logic - 7h
 3. Styling - 5h
 4. Adding Flow and Formik - 2h
+
+Total : 14.5h
