@@ -1,0 +1,122 @@
+@keyframes dialog-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  animation-name: dialog-fade;
+  animation-duration: .3s;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include background-with-opacity(.5);
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    background: $white-color;
+    border: 2px solid $grey-color;
+    border-radius: $border-radius-modal;
+    z-index: 2;
+
+    &-header {
+      width: 100%;
+      height: $bar-height;
+      box-shadow: $main-box-shadow;
+
+      &-text {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    &-body {
+      margin: 50px 0;
+
+      &-form {
+
+        &-group {
+          display: flex;
+          flex-direction: column;
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+        }
+
+        &-input {
+          padding: 5px 10px;
+          margin-top: 5px;
+          border: 1px solid $grey-color;
+          border-radius: $border-radius;
+          font: $main-font;
+          resize: none;
+        }
+
+        &-textarea {
+          height: 75px;
+        }
+      }
+    }
+
+    &-footer {
+      height: $bar-height;
+      margin-top: auto;
+      padding-top: 20px;
+      box-shadow: $main-box-shadow;
+      @extend %button-group;
+
+      &-buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+    }
+
+    &-warning {
+      color: $danger-color;
+    }
+  }
+
+  @media screen and (min-width: $md-min) {
+
+    &__content {
+      max-width: 600px;
+      max-height: 400px;
+
+      &-header {
+        box-shadow: $dialog-box-shadow-top;
+      }
+
+      &-body {
+        margin: 20px 0;
+      }
+
+      &-footer {
+        box-shadow: $dialog-box-shadow-bottom;
+      }
+    }
+  }
+}

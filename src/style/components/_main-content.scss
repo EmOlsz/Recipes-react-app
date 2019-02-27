@@ -1,0 +1,50 @@
+.main-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__header {
+    width: 100%;
+    height: $bar-height;
+    position: fixed;
+    box-shadow: $main-box-shadow;
+
+    &-text {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin-top: $bar-height;
+
+    &-controls {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-counter {
+        display: inline-block;
+        font: $bold-font-italic;
+        margin: 0 5px;
+        color: $primary-dark-color;
+      }
+    }
+  }
+
+  @media screen and (min-width: $md-min) {
+
+    &__body {
+      align-items: flex-end;
+    }
+  }
+}

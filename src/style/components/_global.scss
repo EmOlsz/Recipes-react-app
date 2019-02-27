@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font: $main-font;
+}
+
+#app {
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  max-width: 320px;
+
+  @media screen and (min-width: $sm-min) {
+    max-width: 700px;
+  }
+
+  @media screen and (min-width: $md-min) {
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: $lg-min) {
+    max-width: 1150px;
+  }
+}
+
+.dialog-container {
+  width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  max-width: 320px;
+
+  @media screen and (min-width: $sm-min) {
+    max-width: 700px;
+  }
+
+  @media screen and (min-width: $md-min) {
+    max-width: 500px;
+  }
+}

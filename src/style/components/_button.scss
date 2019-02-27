@@ -1,0 +1,26 @@
+.button {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: $border-radius;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 $grey-color;
+  transition: box-shadow .2s ease;
+
+  &__none {
+    @include button-intent("none");
+  }
+
+  &__primary {
+    @include button-intent("primary");
+  }
+
+  &__danger {
+    @include button-intent("danger");
+  }
+
+  &:hover {
+    box-shadow: 0 10px 10px -4px $grey-color;
+  }
+}

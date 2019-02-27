@@ -1,0 +1,63 @@
+.recipes-group {
+  max-height: calc(100vh - 200px);
+  width: 100%;
+  border: 2px solid $grey-color;
+  border-radius: $border-radius;
+  padding: 25px;
+  margin: 20px 0;
+  overflow: auto;
+  box-sizing: border-box;
+  @include background-with-opacity(.1);
+
+  &__info {
+    text-align: center;
+  }
+
+  &__recipe {
+
+    &-header {
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    &-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease-in-out;
+
+      &_expanded {
+        max-height: 250px;
+      }
+    }
+
+    &-button-group {
+      display: flex;
+      justify-content: flex-end;
+      padding: 15px 0;
+      @extend %button-group
+    }
+
+    &-ingredients {
+      margin-top: 25px;
+
+      &-title {
+        padding-bottom: 15px;
+        margin: 0;
+      }
+
+      &-content {
+        padding: 10px 0;
+        max-height: 100px;
+        overflow: auto;
+        word-break: break-word;
+        font: $light-font-italic;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-color;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

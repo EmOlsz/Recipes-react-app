@@ -1,0 +1,7 @@
+@mixin button-intent($intent) {
+  @extend %button-background-#{$intent};
+}
+
+@mixin background-with-opacity($opacity) {
+  background: rgba(0, 0, 0, $opacity);
+}
